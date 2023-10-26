@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* menu */
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #14343d;
+    background: #14343d;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.li-icon a {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+
+
+a:hover {
+    opacity: 0.7;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    height: 15vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #14343d;
+    margin: 8px;
+}
+
+
+@media (max-width: 999px) {
+
+    .nav-list {
+        margin-top: 35px;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #14343d;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+
+
+/* menu */
+
+/* banner */
+.banner {
+
+    background: url(./img/banner.jpeg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+/* banner */
+
+
+/*quem-somos */
+
+.quem-somos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #14343d;
+    padding: 60px 0;
+}
+
+.quem-somos h2 {
+    text-align: center;
+    background: #14343d;
+    color: #f0b91d;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.quem-somos-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.texto1 {
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+
+}
+
+.texto2 {
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+
+}
+
+.imagem {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 450px;
+    bottom: 0;
+    right: 0;
+    transform: translate(35%, 0%);
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.15s ease-in-out;
+    transform: translate(0%, 0%);
+}
+
+.imagemHover {
+    transform: translate(35%, 0%) !important;
+}
+
+.amarelo {
+    color: #f0b91d;
+}
+
+
+/*quem-somos fim */
+
+/* serviços inicio */
+
+.sv h1 {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 50px;
+    color: #f0b91d;
+}
+
+.er {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: -100px;
+}
+
+.swiper-slide>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pagination_ {
+    position: absolute;
+    width: calc(100% - 10%);
+    margin-top: 50px;
+}
+
+.pagination_ div[class^="swiper-button"]::after {
+    display: none;
+}
+
+
+
+
+/* serviços fim */
+
+
+
+/* vantagens */
+
+.vantagens {
+    background: #14343d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.vantagens h1 {
+    color: #f0b91d;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.vantagens-itens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0px auto;
+}
+
+.vantagens-itens p {
+    text-align: center;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.vantagens-contratar h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 300px;
+    color: #f0b91d;
+
+}
+
+.texto3 p {
+    color: #fff;
+    margin-top: 100px;
+    right: 300px;
+}
+
+.bloco2 {
+    border: 2px solid #fff;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: -190px;
+}
+
+.bloco2 p {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+
+}
+
+.vantagens-j {
+    background: #14343d;
+    border: 1px solid #14343d;
+    width: 100%;
+    margin-top: 60px;
+    height: 200px;
+}
+
+
+.vantagens-j h1 {
+    text-align: center;
+    background: #14343d;
+    font-size: 30px;
+    color: #f0b91d;
+    margin-top: 100px;
+}
+
+/* vantagens */
+
+/* duvidas */
+.duvidas {
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.duvidas h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: #f0b91d;
+}
+
+.accordion {
+    background: #14343d;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+    background: #14343d;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-top: 20px;
+
+}
+
+.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+/* duvidas */
+
+/*depoimento*/
+.depoimento {
+    height: 500px;
+    background: #14343d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.foto {
+    border: 1px solid #14343d;
+    text-align: center;
+    background: #14343d;
+    color: #f0b91d;
+    height: 100px;
+
+}
+
+.foto h1 {
+    margin-top: 50px;
+}
+
+.depoimento1 {
+    width: 250px;
+    height: 250px;
+}
+
+/*depoimento*/
+
+/*formulario */
+
+/*Form */
+
+form {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    max-width: 500px;
+    margin-top: 30px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+}
+
+input,
+textarea {
+    width: 400px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid;
+
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    color: #14343d;
+    font-weight: bold;
+}
+
+.enviar {
+    background-color: #14343d;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: #f0b91d;
+}
+
+textarea {
+    width: 400px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 400px;
+}
+
+form label {
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+.titulo-produtos {
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+
+.whats {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+
+
+
+
+/*formulario */
+
+
+/*rodape */
+
+.rodape {
+    height: 300px;
+    margin-top: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border: 10px solid #14343d;
+    border-radius: 50px;
+}
+
+.rod {
+
+    width: 500px;
+    height: 200px;
+    text-align: center;
+
+}
+
+.rod p {
+    color: #14343d;
+    margin-top: 10px;
+}
+
+
+
+/*rodape */
+
+
+@media (max-width: 675px) {
+    .banner {
+        width: 100%;
+        height: 200px;
+        z-index: 0;
+    }
+
+    .quem-somos {
+        position: relative;
+        width: 100%;
+        gap: 20px;
+        padding: 60px 0;
+    }
+
+    .quem-somos h2 {
+        font-size: 18px;
+    }
+
+    .texto1 {
+        width: 90%;
+        font-size: 9px;
+    }
+
+    .texto2 {
+        width: 90%;
+        font-size: 9px;
+    }
+
+    .imagem {
+        width: 185px;
+    }
+
+    .sv h1 {
+        margin-left: unset;
+    }
+
+    .manual-navigation {
+        margin-top: -105px;
+    }
+
+    .quem-somos-content {
+        justify-content: space-around;
+        gap: 0px;
+    }
+
+    .er {
+        width: 100%;
+        height: unset;
+        padding: 40px 10px;
+    }
+
+    .vantagens-itens p {
+        width: 100%;
+    }
+
+    .vantagens-j h1 {
+        font-size: 20px;
+    }
+
+    .vantagens {
+        width: 100%;
+        gap: 30px;
+
+    }
+
+    .vantagens-itens {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+
+
+    .duvidas {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .duvidas h1 {
+        margin-left: unset;
+    }
+
+    .bloco2 p {
+        font-size: 5px;
+
+    }
+
+
+    .depoimento {
+        flex-direction: column;
+        height: unset;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .depoimento1 {
+        width: unset;
+        height: unset;
+        margin-top: unset;
+    }
+
+    form {
+        margin-top: unset;
+        margin: unset;
+        padding: 30px;
+    }
+
+    .titulo h1 {
+        margin-top: 30px;
+    }
+
+    .rod {
+        width: unset;
+        height: unset;
+    }
+
+    .rod p {
+        font-size: 10px;
+        line-height: 1rem;
+
+    }
+
+    .foto {
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    .foto h1 {
+        margin-top: 30px;
+        margin-left: unset;
+    }
+
+    form input {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    form textarea {
+        width: 90%;
+        margin-right: 20px;
+    }
+
+    form #Mensagem {
+        width: 100%;
+    }
+
+    .vantagens {
+        padding: 40px 20px;
+    }
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        height: unset;
+        padding: 40px 10px;
+        margin: 30px 10px;
+    }
+
+    .rod p {
+        font-size: 1.3rem;
+        line-height: 40px;
+        margin-top: 30px;
+    }
+
+    .accordion {
+        width: 100%;
+
+    }
+
+    .swiper {
+        height: 20%;
+        display: block;
+    }
+
+
+
+}
